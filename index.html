@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>徐锦浩 · 网页游戏作品集</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0d1117; color: #e6edf3;
+    min-height: 100vh; padding: 48px 20px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 40px; }
+  header h1 { font-size: 28px; letter-spacing: 2px; }
+  header p { color: #8b949e; margin-top: 10px; font-size: 14px; line-height: 1.8; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: #161b22; border: 1px solid #30363d; border-radius: 12px;
+    padding: 24px; display: flex; flex-direction: column;
+    transition: transform .2s, border-color .2s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: #58a6ff; }
+  .card .tags { margin-bottom: 12px; }
+  .tag {
+    display: inline-block; font-size: 12px; color: #58a6ff;
+    border: 1px solid #1f6feb; border-radius: 20px;
+    padding: 2px 10px; margin: 0 6px 6px 0;
+  }
+  .card h2 { font-size: 20px; margin-bottom: 10px; }
+  .card .desc { font-size: 14px; color: #8b949e; line-height: 1.8; flex: 1; }
+  .card .points { font-size: 13px; color: #c9d1d9; line-height: 1.9; margin: 12px 0 18px; padding-left: 18px; }
+  .play {
+    display: block; text-align: center; text-decoration: none;
+    background: #238636; color: #fff; font-weight: bold;
+    padding: 12px 0; border-radius: 8px; font-size: 15px;
+  }
+  .play:hover { background: #2ea043; }
+  footer { text-align: center; color: #6e7681; font-size: 13px; margin-top: 44px; line-height: 2; }
+  kbd {
+    background: #21262d; border: 1px solid #30363d; border-radius: 4px;
+    padding: 1px 7px; font-size: 12px; font-family: monospace;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>徐锦浩 · 网页游戏作品集</h1>
+    <p>三款独立设计并开发的 HTML5 Canvas 游戏 · 纯 JavaScript 零依赖 · 单文件即开即玩<br>
+    建议使用 PC 端 Chrome 浏览器体验</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="tags"><span class="tag">动作</span><span class="tag">单机 AI</span></div>
+      <h2>刹那 KṢAṆA · 弹反试炼</h2>
+      <p class="desc">一瞬胜负的硬核弹反动作游戏。在敌人命中前的刹那按下弹反，触发子弹时间令敌人破势。</p>
+      <ul class="points">
+        <li>0.06~0.18 秒分级弹反判定窗口</li>
+        <li>完美弹反触发子弹时间 + 破势硬直</li>
+        <li>连续弹反倍率系统（最高 ×5）</li>
+        <li><kbd>WASD</kbd> 移动 <kbd>J</kbd> 斩击 <kbd>K</kbd> 弹反 <kbd>Shift</kbd> 闪避</li>
+      </ul>
+      <a class="play" href="ksana.html">开始游戏 →</a>
+    </div>
+
+    <div class="card">
+      <div class="tags"><span class="tag">格斗</span><span class="tag">双人 / AI</span><span class="tag">WebSocket 联机</span></div>
+      <h2>江湖对决 · 古风双人格斗</h2>
+      <p class="desc">古风武侠题材 2D 格斗，支持单人对 AI、本地双人同屏，以及基于 WebSocket 的联机对战。</p>
+      <ul class="points">
+        <li>完整格斗系统：连段、防御、受击判定</li>
+        <li>人机 AI + 本地双人 + 联机对战三种模式</li>
+        <li>联机版需本地启动服务端，详见策划案</li>
+      </ul>
+      <a class="play" href="wuxia.html">开始游戏 →</a>
+    </div>
+
+    <div class="card">
+      <div class="tags"><span class="tag">格斗</span><span class="tag">街机风</span></div>
+      <h2>激斗 GEKIDO · 格斗之王</h2>
+      <p class="desc">街机风格 2D 格斗游戏，快节奏攻防，强调立回与连段的对抗体验。</p>
+      <ul class="points">
+        <li>街机式快节奏格斗手感</li>
+        <li>连段与立回对抗设计</li>
+      </ul>
+      <a class="play" href="fight.html">开始游戏 →</a>
+    </div>
+  </div>
+
+  <footer>
+    三款作品均由本人独立完成策划与程序开发 · 对应策划设计案见投递附件<br>
+    如遇加载异常请刷新页面 · 江湖对决联机功能需在本地环境启动服务端
+  </footer>
+</div>
+</body>
+</html>
